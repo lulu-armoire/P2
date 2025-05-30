@@ -1,0 +1,39 @@
+## **Práctica 2: Interrupciones**
+
+Una interrupción es una señal que interrumpe el funcionamiento normal del microprocesador para hacer una tarea concreta
+
+En la practica vamos a ver 2 tipos de interupciones
+
+- **Interrupción por hardware**: Provocada por un pulsador
+- **Interrupción por Timer**: Generada por un contador interno que ponemos en el codigo que hace que se ejecute una acción en intervalos de tiempo específicos
+
+Cuando ocurre una interrupción, el microcontrolador ejecuta una función llamada **Rutina de Servicio de Interrupción (ISR)** y luego regresa a su ejecución normal
+
+## **Práctica A: Interrupción por GPIO**
+
+### **Montaje**
+Se utilizará un pulsador conectado al pin GPIO 18 del ESP32. Cada vez que el botón sea presionado, se incrementará un contador y se mostrará un mensaje por el monitor
+
+### *Código en github *
+
+
+### **Resultados **
+Cada vez que pulsabamos el boton veiamos en el monitor un numero muy grande aunque solo habiamos pulsado una vez, eso pasa por los rebotes ya que el pulsador no es perfecto
+
+![Leer un pulsador con Arduino con interrupciones y debounce](https://www.luisllamas.es/wp-content/uploads/2016/05/arduino-rebote.png)
+Esta grafica representa bastante bien lo que he explicado de los rebotes del pulsador
+
+
+## **Práctica B: Interrupción por Temporizador**
+
+### **Montaje**
+Configuramos un timer en el codigo
+
+### **Código en github **
+
+
+### **Resultados **
+- En el monitor observamos que cada segundo se registra una interrupción
+- El contador se incrementa correctamente con cada lectura del temporizador
+
+> Written with [StackEdit](https://stackedit.io/).
